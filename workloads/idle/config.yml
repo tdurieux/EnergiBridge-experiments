@@ -1,0 +1,8 @@
+name: idle
+description: "Do nothing for a while"
+enabled: true
+variables:
+  duration: 10
+linux-cmd: sleep $duration
+windows-cmd: timeout /t $duration
+macos-cmd: sleep $duration

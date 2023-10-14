@@ -1,0 +1,8 @@
+name: warmup
+description: "Warmup the system for more accurate measurements"
+enabled: false
+variables:
+  duration: 10
+linux-cmd: sysbench cpu run --time=$duration
+macos-cmd: sysbench cpu run --time=$duration
+windows-cmd: consume -cpu-time -time $duration
