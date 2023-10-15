@@ -8,5 +8,5 @@ variables:
   seed: 12345678
   threads: 1
 linux-cmd: ./llama.cpp/main -m $model -p '$prompt' -n $size --seed $seed -t $threads
-windows-cmd: .\llama.cpp]main.exe -m $model -p '$prompt' -n $size --seed $seed -t $threads
+windows-cmd: .\llama.cpp\main.exe -m $model -p "$prompt" -n $size --seed $seed -t $threads
 macos-cmd: ./llama.cpp/main -m $model -p '$prompt' -n $size --seed $seed -t $threads

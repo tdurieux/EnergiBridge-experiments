@@ -13,10 +13,8 @@ class EnergiBridge:
         program_path = os.path.join(os.path.dirname(__file__), "..", "energibridge", "energi_bridge")
         if sys.platform == "win32":
             program_path += ".exe"
-        output_path = os.path.join(self.settings.output, str(task.id))
-        return f"{program_path} -i {self.settings.interval} -o {output_path}.csv --command-output {output_path}.log"
+        return [program_path, "-i", str(self.settings.interval), "-o", f"{task.output_path}.csv", "--command-output", f"{task.output_path}.log"]
 
     def run(self, task: src.runner.Task):
-        cmd = self.cmd(task) + " -- " + task.workload.command
-        os.makedirs(self.settings.output, exist_ok=True)
-        subprocess.run(cmd, shell=True, check=True)
+        os.makedirs(os.path.dirname(task.output_path), exist_ok=True)
+        subprocess.Popen(" ".join(self.cmd(task) + ['--', task.workload.command]), shell=True).wait()

@@ -1,5 +1,5 @@
 name: warmup
-description: "Warmup the system for more accurate measurements"
+description: "Warmup the system for more acurate measurements"
 enabled: false
 variables:
   duration: 10

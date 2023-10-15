@@ -1,4 +1,4 @@
-
+import os
 import random
 from time import sleep
 from src.EnergiBridge import EnergiBridge
@@ -10,6 +10,10 @@ class Task:
         self.id = id
         self.workload = workload
         self.settings = settings
+
+    @property
+    def output_path(self):
+        return os.path.join(self.settings.output, self.workload.name, str(self.id))
 
     def run(self):
         EnergiBridge(self.settings).run(self)
@@ -23,6 +27,7 @@ def generate_tasks(workloads: [Workload], settings):
         row += 1
     tasks.sort(key = lambda x: random.random())
     warmup_workload = Workload("warmup")
+    return tasks
     return [Task(-1, warmup_workload, settings)] + tasks
 
 def run(workloads: [Workload], settings):

@@ -22,7 +22,7 @@ def get_workloads():
 class Workload:
     def __init__(self, name):
         self.name = name
-        self.path = os.path.join(WORKLOADS_DIR, name)
+        self.path = (os.path.join(WORKLOADS_DIR, name))
         self._data = None
 
         self._load()
@@ -56,4 +56,7 @@ class Workload:
         
         for var in self._data.get("variables", []):
             cmd = cmd.replace(f"${var}", str(self._data["variables"][var]))
-        return cmd.replace("./", self.path + "/")
+        cmd = cmd.replace(" ./", " " + self.path + "/").replace(" .\\", " " + self.path + "\\")
+        if cmd.startswith("./") or cmd.startswith(".\\"):
+            return self.path + cmd[1:]
+        return cmd
