@@ -56,4 +56,4 @@ class Workload:
         
         for var in self._data.get("variables", []):
             cmd = cmd.replace(f"${var}", str(self._data["variables"][var]))
-        return cmd
+        return cmd.replace("./", self.path + "/")

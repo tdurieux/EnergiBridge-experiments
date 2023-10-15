@@ -1,5 +1,6 @@
 
 import random
+from time import sleep
 from src.EnergiBridge import EnergiBridge
 
 from src.Workload import Workload
@@ -28,3 +29,4 @@ def run(workloads: [Workload], settings):
     tasks = generate_tasks(workloads, settings)
     for task in tasks:
         task.run()
+        sleep(settings.sleep)

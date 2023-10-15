@@ -15,6 +15,12 @@ def cli():
         type=int,
         nargs='?',
         default=30)
+    parser.add_argument("--sleep",
+        help="sleep time between runs.",
+        dest="sleep",
+        type=int,
+        nargs='?',
+        default=5)
     parser.add_argument("-i", "--interval",
         help="Interval between measurements.",
         dest="interval",

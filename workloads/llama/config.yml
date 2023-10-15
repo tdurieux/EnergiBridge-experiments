@@ -1,0 +1,12 @@
+name: llama
+description: "Inference of LLaMA model in pure C/C++"
+enabled: true
+variables:
+  model: ./models/llama-2-7b-chat.Q4_0.gguf
+  prompt: "Building a website can be done in 10 simple steps:"
+  size: 1024
+  seed: 12345678
+  threads: 1
+linux-cmd: ./llama.cpp/main -m $model -p '$prompt' -n $size --seed $seed -t $threads
+windows-cmd: .\llama.cpp]main.exe -m $model -p '$prompt' -n $size --seed $seed -t $threads
+macos-cmd: ./llama.cpp/main -m $model -p '$prompt' -n $size --seed $seed -t $threads
