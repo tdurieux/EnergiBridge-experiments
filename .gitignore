@@ -1,5 +1,5 @@
 energibridge/*
 results
 env
-workloads/models/*
+workloads/llama/models/*
 *.pyc

@@ -18,5 +18,9 @@ cd workloads/llama/llama.cpp
 Downloads the release of llama.cpp: 
 https://github.com/ggerganov/llama.cpp/releases
 
+Download cpu stress test https://web.archive.org/web/20070119115200/https://download.microsoft.com/download/8/e/c/8ec3a7d8-05b4-440a-a71e-ca3ee25fe057/rktools.exe
+
+### Mac
+Install `brew install sysbench`
 
 ## Results
