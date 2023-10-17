@@ -27,8 +27,10 @@ def generate_tasks(workloads: [Workload], settings):
         row += 1
     tasks.sort(key = lambda x: random.random())
     warmup_workload = Workload("warmup")
-    return tasks
-    return [Task(-1, warmup_workload, settings)] + tasks
+    if settings.warmup > 0:
+        return [Task(-1, warmup_workload, settings)] + tasks
+    else:
+        return tasks
 
 def run(workloads: [Workload], settings):
     tasks = generate_tasks(workloads, settings)

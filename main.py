@@ -5,6 +5,7 @@ from src.Workload import get_workloads, Workload
 from src.runner import run
 
 def cli():
+    workloads = get_workloads()
     parser = argparse.ArgumentParser(
         description="Execute EnergiBridge experiments.",
         add_help=False,
@@ -27,6 +28,12 @@ def cli():
         type=int,
         nargs='?',
         default=100)
+    parser.add_argument("--warmup",
+        help="Warmup time.",
+        dest="warmup",
+        type=int,
+        nargs='?',
+        default=0)
     parser.add_argument("-o", "--output",
         help="Output directory.",
         dest="output",
@@ -36,7 +43,7 @@ def cli():
     parser.add_argument("-w", "--workloads",
         help="List of workloads to run.",
         dest="workloads",
-        choices=["all", "idle", "llama"],
+        choices=["all"] + [w.name for w in workloads],
         type=str,
         nargs='*',
         default="all")

@@ -1,0 +1,9 @@
+name: chrome
+description: "Open google.com with firefox and close the browser"
+enabled: true
+max_execution: 10
+variables:
+  args: -new-instance -headless -new-window https://google.com -private
+linux-cmd: firefox $args
+macos-cmd: /Applications/Firefox.app/Contents/MacOS/firefox $args
+windows-cmd: firefox $args

@@ -36,6 +36,12 @@ class Workload:
             self._data = load(f, Loader=Loader)
 
     @property
+    def max_execution(self):
+        if self._data is None:
+            return -1
+        return self._data.get("max_execution", -1)
+    
+    @property
     def enabled(self):
         if self._data is None:
             return False
