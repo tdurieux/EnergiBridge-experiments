@@ -38,8 +38,8 @@ class Workload:
     @property
     def max_execution(self):
         if self._data is None:
-            return -1
-        return self._data.get("max_execution", -1)
+            return 0
+        return self._data.get("max_execution", 0)
     
     @property
     def enabled(self):

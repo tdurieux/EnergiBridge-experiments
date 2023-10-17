@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-import subprocess, os, sys
+import subprocess, os, sys, datetime, json
 
 import src.runner
 
@@ -17,4 +17,14 @@ class EnergiBridge:
 
     def run(self, task: src.runner.Task):
         os.makedirs(os.path.dirname(task.output_path), exist_ok=True)
-        subprocess.Popen(" ".join(self.cmd(task) + ['--', task.workload.command]), shell=True).wait()
+        o = {
+            "startingTime": datetime.datetime.now().isoformat(),
+            "energiBridgeCmd": " ".join(self.cmd(task)),
+            "taskCmd": task.workload.command,
+        }
+        try:
+            subprocess.Popen(" ".join(self.cmd(task) + ['--', task.workload.command]), shell=True).wait()
+        finally:
+            o["endingTime"] = datetime.datetime.now().isoformat()
+            with open(f"{task.output_path}.json", "w") as f:
+                json.dump(o, f, indent=4)
