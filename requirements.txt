@@ -1,2 +1,6 @@
 argparse
 PyYAML
+matplotlib
+seaborn
+pandas
+numpy

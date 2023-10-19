@@ -2,4 +2,5 @@ energibridge/*
 results
 env
 workloads/llama/models/*
+figures
 *.pyc
