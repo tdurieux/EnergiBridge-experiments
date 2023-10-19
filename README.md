@@ -24,3 +24,17 @@ Download cpu stress test https://web.archive.org/web/20070119115200/https://down
 Install `brew install sysbench`
 
 ## Results
+
+The raw results of our experiments are available in the `/results` folder.
+The results are devided by platform, by date and by workload.
+The results can also by vizualized inside the Jupiter notebook: `analysis.ipynb`.
+
+## Worlkoads
+
+The replication package currently support 5 workloads:
+
+1. Chrome
+2. Firefox
+3. IDLE
+4. llama
+5. CPU warmup
