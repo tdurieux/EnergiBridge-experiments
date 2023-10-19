@@ -1,9 +1,9 @@
 name: chrome
 description: "Open google.com with Chrome and close the browser"
 enabled: true
-max_execution: 3
+max_execution: 10
 variables:
   args: https://google.com
 linux-cmd: chrome $args
 macos-cmd: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome $args
-windows-cmd: chrome $args
+windows-cmd: chrome.exe $args
