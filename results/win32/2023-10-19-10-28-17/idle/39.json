@@ -1,0 +1,6 @@
+{
+    "startingTime": "2023-10-19T10:31:17.334660",
+    "energiBridgeCmd": "C:\\Users\\June\\Documents\\git\\EnergiBridge-experiements\\src\\..\\energibridge\\energibridge.exe -i 100 --max-execution 0 -o C:\\Users\\June\\Documents\\git\\EnergiBridge-experiements\\results\\win32\\2023-10-19-10-28-17\\idle\\39.csv --command-output C:\\Users\\June\\Documents\\git\\EnergiBridge-experiements\\results\\win32\\2023-10-19-10-28-17\\idle\\39.log",
+    "taskCmd": "timeout /t 10",
+    "endingTime": "2023-10-19T10:31:27.211096"
+}

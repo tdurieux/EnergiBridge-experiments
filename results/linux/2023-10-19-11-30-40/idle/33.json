@@ -1,0 +1,6 @@
+{
+    "startingTime": "2023-10-19T11:35:21.290748",
+    "energiBridgeCmd": "/home/tdurieux/git/EnergiBridge-experiements/src/../energibridge/energibridge -i 100 --max-execution 0 -o /home/tdurieux/git/EnergiBridge-experiements/results/linux/2023-10-19-11-30-40/idle/33.csv --command-output /home/tdurieux/git/EnergiBridge-experiements/results/linux/2023-10-19-11-30-40/idle/33.log",
+    "taskCmd": "sleep 10",
+    "endingTime": "2023-10-19T11:35:31.325604"
+}

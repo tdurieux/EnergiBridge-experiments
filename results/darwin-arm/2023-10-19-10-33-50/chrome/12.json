@@ -1,0 +1,6 @@
+{
+    "startingTime": "2023-10-19T10:38:17.564040",
+    "energiBridgeCmd": "/Users/tdurieux/git/greenserver/EnergiBridge-experiements/src/../energibridge/energibridge -i 100 --max-execution 10 -o /Users/tdurieux/git/greenserver/EnergiBridge-experiements/results/darwin/2023-10-19-10-33-50/chrome/12.csv --command-output /Users/tdurieux/git/greenserver/EnergiBridge-experiements/results/darwin/2023-10-19-10-33-50/chrome/12.log",
+    "taskCmd": "/Applications/Google\\ Chrome.app/Contents/MacOS/Google\\ Chrome https://google.com",
+    "endingTime": "2023-10-19T10:38:27.678178"
+}

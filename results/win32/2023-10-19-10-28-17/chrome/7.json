@@ -1,0 +1,6 @@
+{
+    "startingTime": "2023-10-19T10:34:57.385048",
+    "energiBridgeCmd": "C:\\Users\\June\\Documents\\git\\EnergiBridge-experiements\\src\\..\\energibridge\\energibridge.exe -i 100 --max-execution 10 -o C:\\Users\\June\\Documents\\git\\EnergiBridge-experiements\\results\\win32\\2023-10-19-10-28-17\\chrome\\7.csv --command-output C:\\Users\\June\\Documents\\git\\EnergiBridge-experiements\\results\\win32\\2023-10-19-10-28-17\\chrome\\7.log",
+    "taskCmd": "chrome.exe https://google.com",
+    "endingTime": "2023-10-19T10:35:07.500946"
+}
